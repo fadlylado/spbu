@@ -4,10 +4,21 @@ using spbu.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
+string _dbConnectionString()
+{
+    var dbname = Environment.GetEnvironmentVariable("DB_NAME");
+    var dbpassword = Environment.GetEnvironmentVariable("DB_PASSWORD");
+    var dbuser = Environment.GetEnvironmentVariable("DB_USER");
+    var dbhost = Environment.GetEnvironmentVariable("DB_HOST");
+    var dbport = Environment.GetEnvironmentVariable("DB_PORT");
+
+    //return $"Server={dbhost};Port={dbport};Database={dbname};User Id={dbuser};Password={dbpassword};";
+    return builder.Configuration.GetConnectionString("DefaultConnection");
+}
+
 // Add services to the container.
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlite(connectionString));
+    options.UseNpgsql(_dbConnectionString()));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
