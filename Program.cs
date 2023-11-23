@@ -12,8 +12,8 @@ string _dbConnectionString()
     var dbhost = Environment.GetEnvironmentVariable("DB_HOST");
     var dbport = Environment.GetEnvironmentVariable("DB_PORT");
 
-    //return $"Server={dbhost};Port={dbport};Database={dbname};User Id={dbuser};Password={dbpassword};";
-    return builder.Configuration.GetConnectionString("DefaultConnection");
+    return $"Server={dbhost};Port={dbport};Database={dbname};User Id={dbuser};Password={dbpassword};";
+    //return builder.Configuration.GetConnectionString("DefaultConnection");
 }
 
 // Add services to the container.
