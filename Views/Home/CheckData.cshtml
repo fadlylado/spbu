@@ -1,0 +1,45 @@
+@model spbu.Models.CheckDataViewModel
+
+@{
+    ViewData["Title"] = "Check Data";
+}
+
+<h1>Cek Data</h1> 
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CheckData">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="NomorPlat" class="control-label">Nomor Plat</label>
+                <input asp-for="NomorPlat" class="form-control" />
+                <span asp-validation-for="NomorPlat" class="text-danger"></span>
+            </div>
+
+            @if (Model != null) 
+            {
+                <p>Tanggal: @Model.TanggalPengisian</p>
+                <p>Limit Kuota BBM: @Model.LimitBbm</p>
+                <p>Kuota BBM yang sudah dipakai: @Model.TotalBbm</p>
+                <p>Sisa Kuota  BBM: @Model.SisaBbm</p>
+
+                 if (Model.SisaBbm > 0)
+                 {
+                    <p>
+                        <a asp-action="Create">Tambah Data</a>
+                    </p>
+                 } 
+            }
+          
+
+            <div class="form-group">
+                <input type="submit" value="Cek Data" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

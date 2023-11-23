@@ -4,6 +4,18 @@ using System.Text.Json.Serialization;
 
 namespace spbu.Models;
 
+public class CheckDataViewModel
+{
+    public int TotalBbm { get; set; }
+    public int LimitBbm { get; set; }
+    public int SisaBbm { get; set; }
+
+    [Required]
+    public string? NomorPlat { get; set; }
+
+    public DateTime? TanggalPengisian { get; set; }
+}
+
 public class DataKendaraan
 {
     [Key]
@@ -14,6 +26,7 @@ public class DataKendaraan
     public int JumlahBbm { get; set; }
 
     [StringLength(20)]
+    [Required]
     public string? NomorPlat { get; set; }
 
     public DateTime? TanggalPengisian { get; set; }

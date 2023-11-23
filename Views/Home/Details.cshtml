@@ -1,0 +1,60 @@
+@model spbu.Models.DataKendaraan
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Data kendaraan</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Nomor Plat
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NomorPlat)
+        </dd>
+        <dt class="col-sm-2">
+            Jumlah BBM
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.JumlahBbm)
+        </dd>
+        <dt class="col-sm-2">
+            Tanggal Pengisian
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TanggalPengisian)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Created)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Created)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Modified)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Modified)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Createdby)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Createdby)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Modifiedby)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Modifiedby)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
