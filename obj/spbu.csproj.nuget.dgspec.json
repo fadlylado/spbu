@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\unkriswina\\spbu\\spbu.csproj": {}
+    "d:\\unkriswina\\spbu\\spbu.csproj": {}
   },
   "projects": {
-    "D:\\unkriswina\\spbu\\spbu.csproj": {
+    "d:\\unkriswina\\spbu\\spbu.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\unkriswina\\spbu\\spbu.csproj",
+        "projectUniqueName": "d:\\unkriswina\\spbu\\spbu.csproj",
         "projectName": "spbu",
-        "projectPath": "D:\\unkriswina\\spbu\\spbu.csproj",
+        "projectPath": "d:\\unkriswina\\spbu\\spbu.csproj",
         "packagesPath": "C:\\Users\\Fadly.Lodo\\.nuget\\packages\\",
-        "outputPath": "D:\\unkriswina\\spbu\\obj\\",
+        "outputPath": "d:\\unkriswina\\spbu\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
