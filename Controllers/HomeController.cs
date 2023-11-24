@@ -7,7 +7,7 @@ using spbu.Models;
 
 namespace spbu.Controllers;
 
-// [Authorize]
+[Authorize]
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
